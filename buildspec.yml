@@ -1,0 +1,12 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - dotnet restore
+      - dotnet publish
+  install:
+    runtime-versions:
+      dotnet: 3.0
+artifacts:
+  files:
+    - bin/Debug/netcoreapp3.0/publish/**/*
