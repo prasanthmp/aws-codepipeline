@@ -10,3 +10,4 @@ phases:
 artifacts:
   files:
     - bin/Debug/netcoreapp3.0/publish/**/*
+  discard-paths: yes    
