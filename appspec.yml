@@ -1,0 +1,15 @@
+hooks: 
+  BeforeInstall:
+    - location: /install-deps.sh
+      timeout: 900
+      runas: root
+  AfterInstall: 
+    - location: /stopall.sh
+      timeout: 900
+      runas: root
+  ApplicationStart:
+    - location: /after-install.sh
+      timeout: 900
+      runas: root
+os: linux
+version: 0.0

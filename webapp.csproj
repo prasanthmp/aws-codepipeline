@@ -4,6 +4,9 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
-
+<ItemGroup>
+    <Content Include="*.sh" CopyToPublishDirectory="Always" />
+    <Content Include="buildspec.yml" CopyToPublishDirectory="Always" />
+</ItemGroup>
 
 </Project>

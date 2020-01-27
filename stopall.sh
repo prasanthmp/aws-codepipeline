@@ -1,0 +1,1 @@
+/snap/bin/docker container stop $(/snap/bin/docker container list -q)
