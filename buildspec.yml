@@ -10,4 +10,8 @@ phases:
 artifacts:
   files:
     - bin/Debug/netcoreapp3.0/publish/**/*
-  base-directory: bin/Debug/netcoreapp3.0/publish
+  base-directory: 
+    - bin*
+    - Debug*
+    - net*
+    - publish*
