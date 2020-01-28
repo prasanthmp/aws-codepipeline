@@ -8,6 +8,7 @@
     <Content Include="*.sh" CopyToPublishDirectory="Always" />
     <Content Include="appspec.yml" CopyToPublishDirectory="Always" />
     <Content Include="buildspec.yml" CopyToPublishDirectory="Always" />
+    <Content Include="Dockerfile" CopyToPublishDirectory="Always" />
 </ItemGroup>
 
 </Project>
