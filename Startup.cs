@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -40,12 +41,22 @@ namespace webapp
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            // Invoke the UseForwardedHeaders middleware and configure it to forward the X-Forwarded-For and X-Forwarded-Proto headers.
+            // NOTE: This must be put BEFORE calling UseAuthentication or similar authentication scheme middlewares.
+            // ref.: https://www.ryadel.com/en/asp-net-core-2-publish-deploy-web-application-linux-centos-tutorial-guide-nginx
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            });                
+
+//            app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
 
             app.UseAuthorization();
+
+        
 
             app.UseEndpoints(endpoints =>
             {
