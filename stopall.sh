@@ -1,1 +1,1 @@
-/snap/bin/dotnet-sdk.dotnet 
+systemctl stop dotnetserver

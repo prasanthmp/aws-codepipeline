@@ -1,1 +1,1 @@
-/snap/bin/dotnet-sdk.dotnet /home/ubuntu/webbuild/webapp.dll
+systemctl start dotnetserver
