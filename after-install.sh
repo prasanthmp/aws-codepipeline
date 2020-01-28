@@ -1,1 +1,1 @@
-/snap/bin/docker run -d -p 8081:80 prasanthprasad/coreapps:latest
+/snap/bin/dotnet-sdk.dotnet /home/ubuntu/webbuild/webapp.dll

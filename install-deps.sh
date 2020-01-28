@@ -1,1 +1,1 @@
-snap install docker
+snap install dotnet-sdk --classic
